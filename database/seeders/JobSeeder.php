@@ -22,7 +22,7 @@ class JobSeeder extends Seeder
         ];
         DB::table("jobs")->insert([
             "title" => $faker->jobTitle(),
-            "category_id" => $faker->numberBetween(1, 8),
+            "category_id" => $faker->numberBetween(9, 13),
             "duration" => $faker->randomNumber(),
             "rate" => $faker->numberBetween(10, 100),
             "description" => $faker->paragraph(),

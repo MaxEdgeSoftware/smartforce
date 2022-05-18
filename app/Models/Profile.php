@@ -10,4 +10,13 @@ class Profile extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function Pinterest()
+    {
+        return $this->hasOne(JobCategory::class, 'id', 'primary_id');
+    }
+    public function Sinterest()
+    {
+        return $this->hasOne(JobCategory::class, 'id', 'secondary_id');
+    }
 }

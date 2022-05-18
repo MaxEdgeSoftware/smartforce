@@ -71,7 +71,7 @@ class AccountController extends Controller
 
         $user->email_verified_at = Carbon::now();
         $user->isVerify = true;
-        $user->status = true;
+        $user->status = false;
         $user->save();
 
         $isVerify = true;

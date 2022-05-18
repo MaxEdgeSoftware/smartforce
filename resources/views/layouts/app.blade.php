@@ -61,6 +61,16 @@
 
             <!--Login button Start-->
             <ul class="buy-button list-inline mb-0">
+
+                @if(auth()->check())
+
+                <li class="list-inline-item mb-0">
+                    <a href="/dashboard" class="">
+                        <span class="btn btn-primary">Dashboard</span>
+                    </a>
+                </li>
+
+                @else
                 <li class="list-inline-item mb-0">
                     <a href="/register" class="">
                         <span class="btn btn-primary">Apply for Jobs</span>
@@ -71,7 +81,7 @@
                         <span class="btn ">Login</span>
                     </a>
                 </li>
-
+                @endif
             </ul>
             <!--Login button End-->
 

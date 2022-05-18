@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="/assets/css/tiny-slider.css" />
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('agents/assets/css/app.min.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('agents/assets/css/style.css') }}"> -->
     <!-- Main Css -->
     <link href="/assets/css/colors/default.css" rel="stylesheet" id="color-opt">
 
@@ -45,37 +47,44 @@
             <div class="sidebar-content">
                 <ul class="sidebar-menu">
                     <li class="">
-                        <a href="index.html" class="text-primary d-flex align-items-center">
+                        <a href="/dashboard" class="text-primary d-flex align-items-center">
                             <i class="iconify rounded shadow-sm bg-light bg-opacity-1 p-2 text-muted" data-width="34" data-icon="fe:home"></i>
                             <span class="hideContent">Dashboard</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="index.html" class="text-primary d-flex align-items-center">
+                        <a href="/myjobs" class="text-primary d-flex align-items-center">
                             <i class="iconify rounded shadow-sm bg-light bg-opacity-1 p-2 text-muted" data-width="34" data-icon="fe:diamond"></i>
                             <span class="hideContent">My Jobs</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="index.html" class="text-primary d-flex align-items-center">
+                        <a href="/wallet" class="text-primary d-flex align-items-center">
                             <i class="iconify rounded shadow-sm bg-light bg-opacity-1 p-2 text-muted" data-width="34" data-icon="fe:wallet"></i>
                             <span class="hideContent">Wallet</span>
                         </a>
                     </li>
+
                     <li class="">
-                        <a href="index.html" class="text-primary d-flex align-items-center">
+                        <a href="/transactions" class="text-primary d-flex align-items-center">
+                            <i class="iconify rounded shadow-sm bg-light bg-opacity-1 p-2 text-muted" data-width="34" data-icon="fe:wallet"></i>
+                            <span class="hideContent">Transactions</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/notifications" class="text-primary d-flex align-items-center">
                             <i class="iconify rounded shadow-sm bg-light bg-opacity-1 p-2 text-muted" data-width="34" data-icon="clarity:notification-line"></i>
                             <span class="hideContent">Notification</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="index.html" class="text-primary d-flex align-items-center">
+                        <a href="/profile" class="text-primary d-flex align-items-center">
                             <i class="iconify rounded shadow-sm bg-light bg-opacity-1 p-2 text-muted" data-width="34" data-icon="fe:user"></i>
                             <span class="hideContent">Profile</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="index.html" class="text-primary d-flex align-items-center">
+                        <a href="/settings" class="text-primary d-flex align-items-center">
                             <i class="iconify rounded shadow-sm bg-light bg-opacity-1 p-2 text-muted" data-width="34" data-icon="ep:setting"></i>
                             <span class="hideContent">Account Settings</span>
                         </a>
@@ -85,7 +94,7 @@
             </div>
         </div>
 
-        <main class="main">
+        <main class="main" style="overflow: scroll;">
             <header class="bg-white py-3 w-100 px-3 shadow-sm">
                 <a class="hideContent2" onclick="toggleSidebar()" href="#?">
                     <span class="iconify rounded shadow-sm bg-light bg-opacity-1 p-2 text-muted" data-width="30" data-icon="ant-design:menu-unfold-outlined"></span>

@@ -36,3 +36,12 @@ Route::post('/verifyme/', [AccountController::class, 'verifyLogin'])->name("veri
 
 
 Route::get("/dashboard", [HomeController::class, 'index']);
+Route::get("/profile", [HomeController::class, 'profile']);
+Route::get("/wallet", [HomeController::class, 'wallet']);
+Route::get("/myjobs", [HomeController::class, 'jobs']);
+Route::get("/myjob/{id}", [HomeController::class, 'userjobs']);
+Route::get("/transactions", [HomeController::class, 'transactions']);
+
+
+
+Route::post('/wallet/account', [HomeController::class, 'addUserAccount'])->name("addUserAccount");

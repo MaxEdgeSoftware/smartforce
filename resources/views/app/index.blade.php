@@ -27,10 +27,14 @@
                     <h1 class="heading mb-3">FIND BEST <br>DOMESTIC JOBS WITH US</h1>
                     <p class="para-desc">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap v5 html page.</p>
                     <div class="mt-4 pt-2">
+                        @if(!auth()->check())
                         <a href="/register" class="btn btn-primary m-1">Apply for Jobs</a>
                         <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="btn btn-primary m-1 lightbox">
                             <span class="fw-bold small align-middle ms-2">All Jobs</span>
                         </a>
+                        @else
+                        <a href="/dashboard" class="btn btn-primary m-1">Dashboard</a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -108,7 +112,7 @@
                 <div class="card how-it-works overflow-hidden rounded shadow border-0 position-relative">
                     <img src="/assets/images/agent3.jpg" class="img-fluid" alt="">
                     <div class="card-body position-absolute bottom-0 bg-primary w-100 h-fit-content">
-                        <a class="d-flex p-0 m-0 justify-content-between text-white">
+                        <a href="/register" class="d-flex p-0 m-0 justify-content-between text-white">
                             <span>Sign Up</span>
                             <span>></span>
                         </a>
@@ -121,7 +125,7 @@
                 <div class="card how-it-works overflow-hidden rounded shadow border-0 position-relative">
                     <img src="/assets/images/agent2.jpg" class="img-fluid" alt="">
                     <div class="card-body position-absolute bottom-0 bg-primary w-100 h-fit-content">
-                        <a class="d-flex p-0 m-0 justify-content-between text-white">
+                        <a href="/dashboard" class="d-flex p-0 m-0 justify-content-between text-white">
                             <span>Create Profile</span>
                             <span>></span>
                         </a>
@@ -135,7 +139,7 @@
                 <div class="card how-it-works overflow-hidden rounded shadow border-0 position-relative">
                     <img src="/assets/images/cv.jpg" class="img-fluid" alt="">
                     <div class="card-body position-absolute bottom-0 bg-primary bg-opacity-0 w-100 h-fit-content">
-                        <a class="d-flex p-0 m-0 justify-content-between text-white">
+                        <a href="/dashboard" class="d-flex p-0 m-0 justify-content-between text-white">
                             <span>Upload CV</span>
                             <span>></span>
                         </a>
@@ -156,7 +160,6 @@
             <div class="col-12 text-center">
                 <div class="section-title mb-4 pb-2">
                     <h4 class="title mb-4">Popular Categories</h4>
-                    <p class="text-muted para-desc mx-auto mb-0">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
                 </div>
             </div>
             <!--end col-->
@@ -164,111 +167,31 @@
         <!--end row-->
 
         <div class="row">
+            @foreach($categories as $category)
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                <div class="card categories overflow-hidden rounded shadow border-0">
-                    <img src="/assets/images/work/1.jpg" class="img-fluid" alt="">
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="javascript:void(0)" class="title h6 text-dark">Communications</a></li>
-                            <li class="h6 mb-0 jobs">125 Jobs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end col-->
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="card categories overflow-hidden rounded shadow border-0">
-                    <img src="/assets/images/work/2.jpg" class="img-fluid" alt="">
+                    <img style="height: 210px; object-fit:cover" src="/storage/{{$category->image_link}}" class="img-fluid" alt="{{$category->title}}">
+                    <!-- <img src="/assets/images/work/1.jpg" class="img-fluid" alt="{{$category->title}}"> -->
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="javascript:void(0)" class="title h6 text-dark">Accounting</a></li>
-                            <li class="h6 mb-0 jobs">125 Jobs</li>
+                            <li><a href="javascript:void(0)" class="title h6 text-dark">{{$category->title}}</a></li>
+                            <li class="h6 mb-0 jobs">{{$category->job_count}} Jobs</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!--end col-->
+            @endforeach
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                <div class="card categories overflow-hidden rounded shadow border-0">
-                    <img src="/assets/images/work/3.jpg" class="img-fluid" alt="">
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="javascript:void(0)" class="title h6 text-dark">Restaurant</a></li>
-                            <li class="h6 mb-0 jobs">125 Jobs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                <div class="card categories overflow-hidden rounded shadow border-0">
-                    <img src="/assets/images/work/4.jpg" class="img-fluid" alt="">
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="javascript:void(0)" class="title h6 text-dark">Health</a></li>
-                            <li class="h6 mb-0 jobs">125 Jobs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                <div class="card categories overflow-hidden rounded shadow border-0">
-                    <img src="/assets/images/work/5.jpg" class="img-fluid" alt="">
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="javascript:void(0)" class="title h6 text-dark">Finance</a></li>
-                            <li class="h6 mb-0 jobs">125 Jobs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                <div class="card categories overflow-hidden rounded shadow border-0">
-                    <img src="/assets/images/work/6.jpg" class="img-fluid" alt="">
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="javascript:void(0)" class="title h6 text-dark">Facilities</a></li>
-                            <li class="h6 mb-0 jobs">125 Jobs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                <div class="card categories overflow-hidden rounded shadow border-0">
-                    <img src="/assets/images/work/7.jpg" class="img-fluid" alt="">
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="javascript:void(0)" class="title h6 text-dark">HR</a></li>
-                            <li class="h6 mb-0 jobs">125 Jobs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                <div class="card categories overflow-hidden rounded shadow border-0">
-                    <img src="/assets/images/work/8.jpg" class="img-fluid" alt="">
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="javascript:void(0)" class="title h6 text-dark">Construction</a></li>
-                            <li class="h6 mb-0 jobs">125 Jobs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end col-->
         </div>
         <!--end row-->
+
+        <div class="card py-4">
+            <div class="text-center">
+                <a class="btn btn-primary" href="/register">Get Started Now</a>
+            </div>
+        </div>
     </div>
     <!--end container-->
 

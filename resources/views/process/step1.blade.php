@@ -15,15 +15,8 @@
                         <p class="text-muted mx-auto mb-0">Step 1</p>
                     </div>
                     <div class="">
-                        <h2 class="fs-5 mb-4">Hi Opeyemi — Tell Us About Yourself...</h2>
+                        <h2 class="fs-5 mb-4">Hi {{auth()->user()->name}} — Tell Us About Yourself...</h2>
                     </div>
-
-                    @if (Session::has('errors'))
-                    <ul class="text-danger">
-                        <li>All fields are required</li>
-                    </ul>
-                    @endif
-
 
                     @if (Session::has('message'))
                     <ul class="text-danger">
