@@ -14,7 +14,7 @@
                         <img src="/assets/images/logo.png" class="avatar avatar-small mb-4 d-block mx-auto" alt="hello">
                     </a>
                 </div>
-                <h6 class="fs-4">Apply to join an Award Winning Domestic Staff Recruitment Agency</h6>
+                <h6 class="fs-4">Apply to join the World's Leading Recruitment Agency</h6>
             </div>
             <div class="form-signin p-4 bg-white rounded shadow" style="max-width: 600px;">
                 <sign-up></sign-up>

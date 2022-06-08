@@ -2,7 +2,7 @@
 
 
 @section("content")
-<div class="container-fluid">
+<div class="container-fluid" id="mainPage">
     <div>
         <p class="text-muted">Welcome back, {{auth()->user()->first_name}}</p>
         <h6 class="fs-11">Dashboard</h6>

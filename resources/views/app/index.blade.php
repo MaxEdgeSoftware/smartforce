@@ -10,6 +10,12 @@
     <div class="mt-sm-0 pt-sm-0 clip" style="position: absolute; top: 0; height: 100vh; width: 100%;">
         <div class="owl-carousel">
             <div class="item">
+                <img src="/assets/images/slider/4.png" style="height: 100vh; object-fit: cover; " alt="">
+            </div>
+            <div class="item">
+                <img src="/assets/images/slider/5.jpg" style="height: 100vh; object-fit: cover; " alt="">
+            </div>
+            <div class="item">
                 <img src="/assets/images/slider/1.jpeg" style="height: 100vh; object-fit: cover; " alt="">
             </div>
             <div class="item">
@@ -24,8 +30,10 @@
         <div class="row align-items-center">
             <div class="col-lg-7 col-md-7">
                 <div class="title-heading title-heading2 mt-4 p-3 shadow-md rounded ">
-                    <h1 class="heading mb-3">FIND BEST <br>DOMESTIC JOBS WITH US</h1>
-                    <p class="para-desc">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap v5 html page.</p>
+                    <h1 class="fw-900 text-uppercase text-white mb-3 main-title">Welcome to the world’s leading Recruitment
+                        agency.</h1>
+                    <p class="para-desc">At Smart force; we link qualified professionals like you to their dream jobs
+                        and employers to the best outstanding talent to help grow their businesses rapidly.</p>
                     <div class="mt-4 pt-2">
                         @if(!auth()->check())
                         <a href="/register" class="btn btn-primary m-1">Apply for Jobs</a>
@@ -74,13 +82,22 @@
             <!--end col-->
 
             <div class="col-lg-6">
-                <h2 class="heading mb-4">Welcome to an Award Winning Domestic Staff Recruitment Agency</h2>
-                <p class="para-desc text-muted">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-                <p class="para-desc text-muted">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                <h2 class="heading mb-4">SMARTFORCE RECRUITMENT AGENCY</h2>
+                <p class="para-desc text-muted">Our target is to serve as a bridge between potential job seekers and
+                    companies or organization using our vast years of HR consulting
+                    experience and business support to enhance productivity of the
+                    organization and self development of the individuals. <br>
+                    With the competitive market of job seekers, finding the perfect job is a key
+                    step in getting the best. Smart force is working with over 30 employees and
+                    over 10 companies in the United Kingdom. We have the exclusive network
+                    to merge companies and organization with the best applicants. <br>
+                    Carving a niche for ourselves has been one of our pivotal points, as we
+                    work with demands from companies in the UK to recruit qualified
+                    candidates for them in the Security sector, health Care Sector, Janitors, etc.</p>
             </div>
 
             <div class="col-lg-6 agent_img">
-                <div class="clippy">d</div>
+                <div class="clippy"></div>
                 <img src="/assets/images/agent.jpg" class="img-fluid" alt="">
             </div>
         </div>
@@ -171,7 +188,7 @@
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
 
                 <div class="card categories overflow-hidden rounded shadow border-0">
-                    <img style="height: 210px; object-fit:cover" src="/storage/{{$category->image_link}}" class="img-fluid" alt="{{$category->title}}">
+                    <img style="height: 210px; object-fit:cover" src="storage/{{$category->image_link}}" class="img-fluid" alt="{{$category->title}}">
                     <!-- <img src="/assets/images/work/1.jpg" class="img-fluid" alt="{{$category->title}}"> -->
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between mb-0">
@@ -201,8 +218,8 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="section-title mb-4 pb-2">
-                    <h4 class="title mb-4">Expert Candidates</h4>
-                    <p class="text-muted para-desc mx-auto mb-0">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                    <h4 class="title mb-4">Workers</h4>
+                    <p class="text-muted para-desc mx-auto mb-0">Meet some of our workers .</p>
                 </div>
             </div>
             <!--end col-->
@@ -214,11 +231,10 @@
                 <div class="card team text-center border-0">
                     <div class="card-body">
                         <div class="position-relative">
-                            <img src="/assets/images/client/02.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
+                            <img src="/assets/images/client/01.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                         </div>
                         <div class="content pt-3 pb-3">
-                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Ronny Jofra</a></h5>
-                            <small class="designation text-muted">Web Developer</small>
+                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Albert Tony</a></h5>
                         </div>
                     </div>
                 </div>
@@ -232,8 +248,7 @@
                             <img src="/assets/images/client/02.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                         </div>
                         <div class="content pt-3 pb-3">
-                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Micheal Carlo</a></h5>
-                            <small class="designation text-muted">Web Designer</small>
+                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Christiana Murillo</a></h5>
                         </div>
                     </div>
                 </div>
@@ -244,32 +259,30 @@
                 <div class="card team text-center border-0">
                     <div class="card-body">
                         <div class="position-relative">
-                            <img src="/assets/images/client/02.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
+                            <img src="/assets/images/client/07.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                         </div>
                         <div class="content pt-3 pb-3">
-                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Aliana Rosy</a></h5>
-                            <small class="designation text-muted">IOS Developer</small>
+                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Andrea Piacquodio</a></h5>
                         </div>
                     </div>
                 </div>
             </div>
             <!--end col-->
+
 
             <div class="col-lg-3 col-md-6 mt-4 pt-2">
                 <div class="card team text-center border-0">
                     <div class="card-body">
                         <div class="position-relative">
-                            <img src="/assets/images/client/02.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
+                            <img src="/assets/images/client/04.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                         </div>
                         <div class="content pt-3 pb-3">
-                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Aliana Rosy</a></h5>
-                            <small class="designation text-muted">IOS Developer</small>
+                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Johnson Blazer</a></h5>
                         </div>
                     </div>
                 </div>
             </div>
             <!--end col-->
-
         </div>
         <!--end row-->
     </div>
@@ -277,7 +290,7 @@
     <!-- Candidates End -->
 
     <!-- Testi start -->
-    <div class="container mt-100 mt-60">
+    <div class="container mt-100 mt-60" style="display: none">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="section-title mb-4 pb-2">

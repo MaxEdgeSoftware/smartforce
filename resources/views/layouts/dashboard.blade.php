@@ -150,6 +150,8 @@
     <script src="/assets/js/app.js"></script>
     <script src="/assets/dashboard/js/app.js"></script>
     <!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
 </body>
 
 </html>

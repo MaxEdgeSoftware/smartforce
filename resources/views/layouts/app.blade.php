@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- favicon -->
     @yield("title")
-    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/assets/images/logo.png">
+
     <!-- Bootstrap -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons -->
@@ -70,6 +71,13 @@
                     </a>
                 </li>
 
+                <li class="list-inline-item mb-0">
+                    <form method="POST" action="{{route('logout')}}" class="">
+                        @csrf
+                        <button class="btn ">Logout</span>
+                    </form>
+                </li>
+
                 @else
                 <li class="list-inline-item mb-0">
                     <a href="/register" class="">
@@ -90,10 +98,9 @@
                 <ul class="navigation-menu">
                     <li><a href="/" class="sub-menu-item">Home</a></li>
                     <li><a href="/about" class="sub-menu-item">About</a></li>
-                    <li><a href="/about" class="sub-menu-item">Clients</a></li>
-                    <li><a href="/about" class="sub-menu-item">Job Categories</a></li>
+                    <li><a href="/categories" class="sub-menu-item">Job Categories</a></li>
                     <li><a href="/contact" class="sub-menu-item">Contact Us</a></li>
-                    <li><a href="job-faqs" class="sub-menu-item">FAQs</a></li>
+                    <!-- <li><a href="job-faqs" class="sub-menu-item">FAQs</a></li> -->
                 </ul>
                 <!--end navigation menu-->
             </div>
@@ -138,7 +145,7 @@
                                 <a href="#" class="logo-footer">
                                     <img src="/assets/images/logo.png" height="40" alt="">
                                 </a>
-                                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi hic, dolore totam reprehenderit amet incidunt, pariatur quam commodi asperiores, vero tenetur esse? Repellendus dolorem velit eius aspernatur, adipisci alias nostrum..</p>
+                                <p class="mt-4">At Smart force; we link qualified professionals like you to their dream jobs and employers to the best outstanding talent to help grow their businesses rapidly.</p>
                                 <ul class="list-unstyled social-icon social mb-0 mt-4">
                                     <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="facebook" class="fea icon-sm fea-social"></i></a></li>
                                     <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="instagram" class="fea icon-sm fea-social"></i></a></li>
@@ -152,10 +159,9 @@
                             <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                 <h5 class="footer-head">Quick Navigation</h5>
                                 <ul class="list-unstyled footer-list mt-4">
-                                    <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> About us</a></li>
-                                    <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Team</a></li>
-                                    <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Jobs</a></li>
-                                    <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Categories</a></li>
+                                    <li><a href="/about" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> About us</a></li>
+                                    <!-- <li><a href="/team" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Team</a></li> -->
+                                    <li><a href="/categories" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Jobs</a></li>
                                     <li><a href="/register" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Apply</a></li>
                                 </ul>
                             </div>
@@ -164,10 +170,10 @@
                             <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                 <h5 class="footer-head">Usefull Links</h5>
                                 <ul class="list-unstyled footer-list mt-4">
-                                    <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Contact Us</a></li>
-                                    <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Terms of Services</a></li>
-                                    <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Privacy Policy</a></li>
-                                    <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Faqs</a></li>
+                                    <li><a href="/contact" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Contact Us</a></li>
+                                    <li><a href="/t-and-c" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Terms of Services</a></li>
+                                    <li><a href="/privacy" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Privacy Policy</a></li>
+                                    <li><a href="/faqs" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Faqs</a></li>
                                 </ul>
                             </div>
                             <!--end col-->

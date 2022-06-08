@@ -8,6 +8,8 @@ use App\Models\UserAccount;
 use App\Models\UserJob;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
 use PhpOption\None;
 
 class HomeController extends Controller
@@ -122,5 +124,30 @@ class HomeController extends Controller
         }
         $total = $transactions->sum("amount");
         return view("dashboard.transactions", compact("transactions", "total"));
+    }
+
+    public function settings()
+    {
+        $user = User::with('Profile')->where("id", auth()->user()->id)->first();
+        $userjobs = UserJob::with("Job")->where("user_id", auth()->user()->id)->get();
+
+        return view('dashboard.settings', compact("user", "userjobs"));
+    }
+
+    public function dashboardPasswordReset(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required'
+        ]);
+
+        if ($request->email != auth()->user()->email) {
+            return redirect()->back()->with("emailErr", "Please enter your email");
+        }
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+        return $status === Password::RESET_LINK_SENT
+            ? back()->with(['status' => __($status)])
+            : back()->withErrors(['email' => __($status)]);
     }
 }
